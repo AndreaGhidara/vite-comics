@@ -29,7 +29,8 @@ export default {
 </script>
 
 <template>
-  <button class="m-5 p-1 btn btn-primary">ClickMe</button>
+  <AppNavbar />
+  
 </template>
 
 <style scoped>
