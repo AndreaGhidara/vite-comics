@@ -31,6 +31,7 @@ export default {
 <template>
   <AppNavbar />
   <AppInfo/>
+  <AppFooter />
 </template>
 
 <style scoped>
