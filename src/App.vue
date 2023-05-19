@@ -30,7 +30,7 @@ export default {
 
 <template>
   <AppNavbar />
-  
+  <AppInfo/>
 </template>
 
 <style scoped>
