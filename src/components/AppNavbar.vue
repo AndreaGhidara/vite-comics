@@ -1,69 +1,127 @@
 <script>
-
+export default {
+    name: "AppNavbar",
+    data() {
+        return {
+            navLink : [
+                {
+                    path:"#",
+                    text:"CHARACTERS",
+                },
+                {
+                    path:"#",
+                    text:"COMICS",
+                },
+                {
+                    path:"#",
+                    text:"MOVIE",
+                },
+                {
+                    path:"#",
+                    text:"TV",
+                },
+                {
+                    path:"#",
+                    text:"GAMES",
+                },
+                {
+                    path:"#",
+                    text:"VIDEOS",
+                },
+                {
+                    path:"#",
+                    text:"FANS",
+                },
+                {
+                    path:"#",
+                    text:"NEWS",
+                },
+                {
+                    path:"#",
+                    text:"SHOP",
+                },
+            ]
+        }
+    },
+    methods: {
+        
+    },
+}
 </script>
 
 <template>
-    <div class="container-fluid d-flex justify-content-center ">
-        <div class="row w-75 p-2 d-flex justify-content-between">
-            <div class="col-3">
-                <img src="../assets/dc-logo.png" alt="">
-            </div>
-            <div class="col-9 d-flex align-items-center">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">CHARACTERS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">COMICS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">MOVIE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">TV</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">GAMES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">COLLECTIBLES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">VIDEOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">FANS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">NEWS</a>
-                    </li>
-                    <li class="nav-item h-100">
-                        <a class="nav-link" href="#">SHOP</a>
-                    </li>
-                </ul>
+    <div class="nav d-flex justify-content-between align-items-center">
+        <div class="p-2">
+            <img class="logo" src="../assets/dc-logo.png" alt="">
+        </div>
+        <div class="h-100 d-flex px-2">
+            <div v-for="link in navLink" class="h-100 test d-flex align-items-center">
+                <a :href="link.path"> {{ link.text}} </a>
             </div>
         </div>
-        </div>
+    </div>
 </template>
 
 <style  scoped>
-
-.h-100{
-    height: 100%;
+.logo:hover {
+    rotate: 180deg;
+    animation-name: Rotate;
+    animation-duration: 3s;
 }
 
-a{
-    color: black;
-    font-size: 18px;
-    font-weight: 600;
+@keyframes Rotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    20% {
+        rotate: 50deg;
+    }
+
+    30% {
+        rotate: 100deg;
+    }
+    
+    40% {
+        rotate: 150deg;
+    }
+
+    50% {
+        rotate: 200deg;
+    }
+
+    60% {
+        rotate: 250deg;
+    }
+
+    70% {
+        rotate: 300deg;
+    }
+
+    80% {
+        rotate: 360deg;
+    }
+
+    90% {
+        rotate: 0deg
+    }
 }
 
-a:hover{
+a {
+    padding: 5px;
+    font-weight: 800;
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
     color: royalblue;
 }
 
-li:hover{
-    border-bottom: 1px solid royalblue;
+.test:hover {
+    border-bottom: 2px solid royalblue;
 }
 
-</style>
+.nav {
+    height: 120px;
+}</style>
