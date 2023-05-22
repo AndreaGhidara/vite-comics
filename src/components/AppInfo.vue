@@ -32,9 +32,6 @@ export default {
             return new URL(imgPath, import.meta.url).href;
         }
     },
-    mounted() {
-
-    }
 }
 </script>
 

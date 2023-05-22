@@ -50,7 +50,7 @@ export default {
 </script>
 
 <template>
-    <div class="nav d-flex justify-content-between align-items-center">
+    <div class="nav container d-flex justify-content-between align-items-center">
         <div class="p-2">
             <img class="logo" src="../assets/dc-logo.png" alt="">
         </div>
