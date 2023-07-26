@@ -61,7 +61,7 @@
 
     img{
         width: 600px;
-        height: 500px;
+        height: 480px;
         object-fit: cover;
     }
 
@@ -77,6 +77,6 @@
 
     .footer{
         background-image: url(../assets/footer-bg.jpg);
-        max-height: 500;
+        max-height: 480px;
     }
 </style>

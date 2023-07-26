@@ -51,11 +51,11 @@ export default {
 
 <template>
     <div class="nav container d-flex justify-content-between align-items-center">
-        <div class="p-2">
+        <div>
             <img class="logo" src="../assets/dc-logo.png" alt="">
         </div>
         <div class="h-100 d-flex px-2">
-            <div v-for="link in navLink" class="h-100 test d-flex align-items-center">
+            <div v-for="link in navLink" :key="link" class="h-100 test d-flex align-items-center">
                 <a :href="link.path"> {{ link.text}} </a>
             </div>
         </div>
@@ -63,6 +63,9 @@ export default {
 </template>
 
 <style  scoped>
+.logo{
+    width: 60px;
+}
 .logo:hover {
     rotate: 180deg;
     animation-name: Rotate;
@@ -123,5 +126,5 @@ a:hover {
 }
 
 .nav {
-    height: 120px;
+    height: 80px;
 }</style>

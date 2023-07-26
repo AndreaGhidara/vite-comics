@@ -10,18 +10,27 @@ export default {
 </script>
 
 <template>
-    <div class="col text-white">
-        <div class="bg-dark my-3 text-center">
-            <img class="rounded" :src="image" alt="">
-            <div class="text-center">{{ title }}</div>
+    <div class="text-white">
+        <div class="my-3 text-center">
+            <img :src="image" alt="">
+            <div class="bg-primary title">
+                <div class="text-center">{{ title }}</div>
+            </div>
         </div>
     </div>
 </template>
 
 <style scoped>
 img {
-    width: 180px;
-    height: 200px;
+    width: 250px;
+    height: 350px;
     object-fit: cover;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.title{
+    width: 80%;
+    margin: auto;
+    border-radius:0 0 10px 10px ;
 }
 </style>
